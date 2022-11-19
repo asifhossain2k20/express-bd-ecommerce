@@ -1,9 +1,12 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Orders = () => {
+    const {products,previousCart}=useLoaderData()
+
     return (
         <div>
-            <h2>This is Order</h2>
+            <h2>This is Order {products.length}</h2>
         </div>
     );
 };
